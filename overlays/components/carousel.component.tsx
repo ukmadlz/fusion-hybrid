@@ -26,7 +26,7 @@ export default function CarouselComponent ({ width, height, interval, spacer, im
             width={"20em"}
         >
             {images.map((image) => {
-                return (<div>
+                return (<div style={{backgroundColor:"rgba(255, 255, 255, 0.2)\"}}>
                     <h1>{caption}</h1>
                     <img
                         src={`https://res.cloudinary.com/elsmore-me/image/upload/c_lpad,h_${height},w_${width}/${image}`}
