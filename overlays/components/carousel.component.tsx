@@ -25,7 +25,8 @@ export default function CarouselComponent ({ width, height, interval, spacer, im
             showThumbs={false}
             width={"20em"}
         >
-            {images.map((image) => {
+            {spacingArray.map(() => { return <div></div>})
+            .concat(images.map((image) => {
                 const imageUrl = (image.startsWith('http')) ?
                     image :
                     `https://res.cloudinary.com/elsmore-me/image/upload/c_lpad,h_${height},w_${width}/${image}`
@@ -35,8 +36,7 @@ export default function CarouselComponent ({ width, height, interval, spacer, im
                         src={imageUrl}
                     />
                 </div>)
-            })}
-            {spacingArray.map(() => { return <div></div>})}
+            }))}
         </Carousel>
     );
 }
